@@ -5,9 +5,35 @@
     --gray: #696773;
 }
 
+/*scroll bar */
+body::-webkit-scrollbar{
+    width: 0.35rem;
+}
+body::-webkit-scrollbar-track{
+    background: var(--contrast);
+}
+body::-webkit-scrollbar-thumb{
+    background:  #501ea1;
+}
+
 body{
     margin: 0;
     padding: 0;
+    background-color: var(--white);
+}
+
+/* Animation for background
+    background-color: var(--background); 
+    animation-name: stars;
+    animation-iteration-count: infinite;
+    animation-duration: 1s; //how long 1 blink of the star is */
+
+@keyframes stars {
+    0%   {background-color:red; left:0px; top:0px;}
+    25%  {background-color:yellow; left:200px; top:0px;}
+    50%  {background-color:blue; left:200px; top:200px;}
+    75%  {background-color:green; left:0px; top:200px;}
+    100% {background-color:red; left:0px; top:0px;}
 }
 
 img{
@@ -68,13 +94,33 @@ img{
     margin-top: 0;
     padding-top: 0;
     display: block;
-    height: 100vh;
+    height: 40vh;
 }
 
 
 
-@media (min-width: 450px) {
+@media screen and (min-width: 600px) {
     body{
-        background-color: white;
+        background-color: rgb(12, 212, 212);
+    }
+
+    #welcome-section{
+        margin-top: 0;
+        padding-top: 0;
+        display: block;
+        height: 50vh;
+    }
+}
+
+@media (min-width: 900px){
+    body{
+        background-color: #190933;
+    }
+
+    #welcome-section{
+        margin-top: 0;
+        padding-top: 0;
+        display: block;
+        height: 100vh;
     }
 }
