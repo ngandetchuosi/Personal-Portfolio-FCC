@@ -1,5 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap');
+
+
 :root{
     --background: #190933;
+    --lighter-background: #501ea1;
+    --darker-contrast: hsl(172, 97%, 39%);
     --contrast: #41EAD4;
     --white: #FFF9FB;
     --gray: #696773;
@@ -19,7 +24,8 @@ body::-webkit-scrollbar-thumb{
 body{
     margin: 0;
     padding: 0;
-    background-color: var(--white);
+    background-color: var(--background);
+    color: var(--contrast);
 }
 
 /* Animation for background
@@ -81,13 +87,38 @@ img{
 */
 
 /* navbar */
-#navbar{
-    position: fixed;
+nav{
+    padding: 4%;
+    position: relative;
     top: 0;
     width: 100%;
-    height: 10rem;
+    font-size: 1.1em;
+    display: flex;
+    justify-content: space-around;
+    color: var(--contrast);
+    font-family: 'Patrick Hand', cursive;
+}
+nav a{
+    padding: 1%;
+    border: 1px solid var(--contrast);
+}
+nav a:hover{
+    color: var(--background);
+    background-color: var(--contrast);
+    padding: 1%;
+}
+nav p{
+    display: inline;
+}
+a, u{
+    text-decoration: none;
+    color: var(--contrast);
 }
 
+/* smaller screen*/
+@media (max-width: 600px){
+    /*nav bar on small screens */
+}
 
 /* welcome section */
 #welcome-section{
